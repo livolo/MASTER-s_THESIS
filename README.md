@@ -49,9 +49,20 @@ The model performance was evaluated using multiple metrics:
 - Feature Importance Analysis
 
 ## Dataset
-The mammography dataset used in this project is approximately **64 GB** and therefore cannot be hosted directly on GitHub.
+Downloaded three CSV files from IBIA: details.csv, Image_details.csv, and Indian Biological Images Archive_labelling.csv.
+Combined the data from multiple databases:
+Step 1: Merged the details.csv with labelling information on Sample ID.
+Step 2: Merged result with Image_details.csv on Experiment ID.
+Essential columns retained: image_path & label (binary: "Cancer" vs. "Not cancer").
+All DICOM images in a_data/ were converted to PNG format in the converted_png/ directory.
+Made a stratified data-split for the images into cancer and non-cancer categories to avoid any leakages. 
+Views: 118
+Images: 3577
+Downloads: 203
+Data size: 63GB
+Generated final_dataset/ with train/validation/test splits-e.g., 70/15/15 ratio-from dataset/ folder.
+Made sure class balance by stratified sampling.
 
-Dataset access information will be provided separately.
 
 ## Project Structure
 ```
