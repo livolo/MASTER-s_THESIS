@@ -1,92 +1,137 @@
 # Development of a Three-Stage Deep Learning–Based Computer-Aided Diagnosis Software for Breast Cancer Classification and Tumor Localization in Mammography
 
 ## Overview
+This project presents a deep learning–based pipeline for analyzing mammography images from the **Indian Biological Images Archive (IBIA)**. The objective is to develop an interpretable AI system capable of detecting suspicious breast cancer regions and assisting clinical diagnosis.
 
-This project presents a complete deep learning pipeline for analyzing mammography images from the Indian Biological Images Archive (IBIA). The goal is to develop an interpretable AI system capable of detecting suspicious breast cancer regions from mammography scans.
-<br>
 The workflow integrates:
-<br>
-Clinical tabular data analysis
-<br>
-CNN-based image classification
-<br>
-Grad-CAM explainability
-<br>
-Pseudo bounding box generation
-<br>
-Object detection using Faster R-CNN
-<br>
+
+- Clinical tabular data analysis  
+- CNN-based image classification  
+- Grad-CAM interpretability  
+- Pseudo bounding box generation  
+- Object detection using Faster R-CNN  
+
 The pipeline is designed to address key challenges such as:
-<br>
-Data leakage prevention
-<br>
-Overfitting control
-<br>
-Feature dependence on clinical metadata
-<br>
-Interpretable tumor localization
-<br>
+
+- Data leakage prevention  
+- Overfitting control  
+- Dependence on clinical metadata  
+- Interpretable tumor localization  
+
+---
 
 ## Project Objective
-To design a hybrid deep learning pipeline capable of:
-- Detecting suspicious regions in mammography images
-- Classifying breast cancer patterns
-- Assisting medical image analysis using AI
+The goal of this project is to design a hybrid deep learning pipeline capable of:
+
+- Detecting suspicious regions in mammography images  
+- Classifying breast cancer patterns  
+- Providing interpretable predictions using Grad-CAM  
+- Assisting medical image analysis using AI  
+
+---
 
 ## Methodology
-The system integrates multiple deep learning techniques:
+The system integrates several deep learning components:
 
-1. Image preprocessing and dataset preparation
-2. Object detection using Faster R-CNN
-3. Classification using ResNet-50
-4. Hybrid CNN pipeline for improved prediction
-5. Model evaluation using confusion matrix, ROC curve, and precision-recall analysis
+1. Image preprocessing and dataset preparation  
+2. CNN-based classification using **ResNet-50**  
+3. Grad-CAM visualization for interpretability  
+4. Pseudo bounding box generation from activation maps  
+5. Object detection refinement using **Faster R-CNN**  
+6. Model evaluation using:
+   - Confusion Matrix
+   - ROC Curve
+   - Precision–Recall analysis
+
+---
 
 ## Technologies Used
-- Python
-- PyTorch
-- TensorFlow
-- Computer Vision
-- Deep Learning
-- Jupyter Notebook
+
+- Python  
+- PyTorch  
+- TensorFlow  
+- Computer Vision  
+- Deep Learning  
+- Jupyter Notebook  
+
+---
 
 ## Model Architecture
-The pipeline includes:
 
-Detection Model:
+### Detection Model
 - Faster R-CNN
 
-Classification Model:
+### Classification Model
 - ResNet-50
 
-Hybrid Pipeline:
-- Feature extraction
-- Model fusion
-- Prediction visualization
+### Hybrid Pipeline
+- Feature extraction  
+- Model fusion  
+- Prediction visualization  
+
+---
 
 ## Results
-The model performance was evaluated using multiple metrics:
-- Confusion Matrix
-- Precision-Recall Curve
-- ROC Curve
-- Feature Importance Analysis
+Model performance was evaluated using multiple metrics:
+
+- Confusion Matrix  
+- Precision–Recall Curve  
+- ROC Curve  
+- Feature Importance Analysis  
+
+These evaluations demonstrate the effectiveness of deep learning models for mammography-based breast cancer detection.
+
+---
 
 ## Dataset
-Downloaded three CSV files from IBIA: details.csv, Image_details.csv, and Indian Biological Images Archive_labelling.csv.
-Combined the data from multiple databases:
-Step 1: Merged the details.csv with labelling information on Sample ID.
-Step 2: Merged result with Image_details.csv on Experiment ID.
-Essential columns retained: image_path & label (binary: "Cancer" vs. "Not cancer").
-All DICOM images in a_data/ were converted to PNG format in the converted_png/ directory.
-Made a stratified data-split for the images into cancer and non-cancer categories to avoid any leakages. 
-Views: 118
-Images: 3577
-Downloads: 203
-Data size: 63GB
-Generated final_dataset/ with train/validation/test splits-e.g., 70/15/15 ratio-from dataset/ folder.
-Made sure class balance by stratified sampling.
+
+The dataset was obtained from the **Indian Biological Images Archive (IBIA)**.
+
+### Data Preparation
+
+1. Downloaded three CSV files:
+   - `details.csv`
+   - `Image_details.csv`
+   - `Indian Biological Images Archive_labelling.csv`
+
+2. Data merging process:
+   - `details.csv` merged with labeling information using **Sample ID**
+   - Result merged with `Image_details.csv` using **Experiment ID**
+
+3. Essential fields retained:
+   - `image_path`
+   - `label` (Cancer / Not Cancer)
+
+4. Image preprocessing:
+   - DICOM images converted to PNG format
+
+```
+a_data/ → converted_png/
+```
+
+5. Dataset splitting:
+
+```
+Train : 70%
+Validation : 15%
+Test : 15%
+```
+
+### Dataset Statistics
+
+| Property | Value |
+|--------|------|
+Views | 118 |
+Images | 3577 |
+Downloads | 203 |
+Dataset Size | ~63 GB |
+
+Due to the large dataset size, the full dataset is **not included in this repository**.
+
+---
 
 ## Project Structure
+
 ```
 Mammography-AI
 │
@@ -103,17 +148,27 @@ Mammography-AI
     └── roc_curve.png
 ```
 
+---
+
 ## Applications
-- Breast cancer early detection
-- Medical image analysis
-- Clinical decision support systems
-- AI-assisted diagnostics
+
+- Breast cancer early detection  
+- Medical image analysis  
+- Clinical decision support systems  
+- AI-assisted diagnostic tools  
+
+---
 
 ## Future Work
-- Improve model accuracy with larger datasets
-- Integrate explainable AI methods
-- Develop a web-based diagnostic interface
+
+- Improve model performance with larger datasets  
+- Integrate explainable AI techniques  
+- Develop a graphical interface for diagnosis  
+- Build a web-based clinical decision support tool  
+
+---
 
 ## Author
-Kirti Vishwakarma  
-Bioinformatics 
+
+**Kirti Vishwakarma**  
+Bioinformatics & AI Research
