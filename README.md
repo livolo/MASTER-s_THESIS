@@ -1,7 +1,31 @@
-# Mammography AI Detection System
+# Development of a Three-Stage Deep Learning–Based Computer-Aided Diagnosis Software for Breast Cancer Classification and Tumor Localization in Mammography
 
 ## Overview
-This project focuses on developing an Artificial Intelligence system for detecting and analyzing abnormalities in mammography images. The goal is to assist in early breast cancer detection by combining deep learning models for lesion detection and classification.
+
+This project presents a complete deep learning pipeline for analyzing mammography images from the Indian Biological Images Archive (IBIA). The goal is to develop an interpretable AI system capable of detecting suspicious breast cancer regions from mammography scans.
+<br>
+The workflow integrates:
+<br>
+Clinical tabular data analysis
+<br>
+CNN-based image classification
+<br>
+Grad-CAM explainability
+<br>
+Pseudo bounding box generation
+<br>
+Object detection using Faster R-CNN
+<br>
+The pipeline is designed to address key challenges such as:
+<br>
+Data leakage prevention
+<br>
+Overfitting control
+<br>
+Feature dependence on clinical metadata
+<br>
+Interpretable tumor localization
+<br>
 
 ## Project Objective
 To design a hybrid deep learning pipeline capable of:
@@ -42,7 +66,6 @@ Hybrid Pipeline:
 
 ## Results
 The model performance was evaluated using multiple metrics:
-
 - Confusion Matrix
 - Precision-Recall Curve
 - ROC Curve
@@ -62,7 +85,6 @@ Downloads: 203
 Data size: 63GB
 Generated final_dataset/ with train/validation/test splits-e.g., 70/15/15 ratio-from dataset/ folder.
 Made sure class balance by stratified sampling.
-
 
 ## Project Structure
 ```
@@ -94,4 +116,4 @@ Mammography-AI
 
 ## Author
 Kirti Vishwakarma  
-Bioinformatics / AI Research
+Bioinformatics 
