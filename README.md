@@ -1,7 +1,7 @@
 # Mammography AI Detection System
 
 ## Overview
-This project focuses on developing an Artificial Intelligence (AI) system for detecting and analyzing abnormalities in mammography images. The goal is to assist in early breast cancer detection by combining deep learning models for lesion detection and classification.
+This project focuses on developing an Artificial Intelligence system for detecting and analyzing abnormalities in mammography images. The goal is to assist in early breast cancer detection by combining deep learning models for lesion detection and classification.
 
 ## Project Objective
 To design a hybrid deep learning pipeline capable of:
@@ -54,19 +54,22 @@ The mammography dataset used in this project is approximately **64 GB** and ther
 Dataset access information will be provided separately.
 
 ## Project Structure
+```
 Mammography-AI
 │
 ├── apphybrid.py
 ├── train_resnet50.py
 ├── train_faster_rcnn.py
 ├── requirements.txt
+│
 ├── notebooks/
-│   ├── evaluation.ipynb
+│   └── evaluation.ipynb
 │
 └── results/
     ├── confusion_matrix.png
-    ├── roc_curve.png
-    
+    └── roc_curve.png
+```
+
 ## Applications
 - Breast cancer early detection
 - Medical image analysis
