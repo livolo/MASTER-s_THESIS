@@ -1,8 +1,0 @@
-streamlit
-numpy
-pillow
-opencv-python-headless
-matplotlib
-torch
-torchvision
-tensorflow
