@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 from PIL import Image
 
-from apphybrid import load_models, run_pipeline
+from websiteBackend import load_models, run_pipeline
 
 st.set_page_config(layout="wide")
 
