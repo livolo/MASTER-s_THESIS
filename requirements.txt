@@ -1,8 +1,8 @@
 streamlit
-numpy
+numpy==1.23.5
 pillow
 opencv-python-headless
 matplotlib
 torch
 torchvision
-tensorflow
+tensorflow==2.12.0
