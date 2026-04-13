@@ -1,13 +1,8 @@
-torch==2.9.1+cpu
-torchvision==0.24.1+cpu
-opencv-python>=4.8
-PySide6>=6.6
-numpy>=1.23
-pillow>=9.5
 streamlit
-numpy>=1.23
-pillow>=9.5
+numpy
+pillow
 opencv-python-headless
 matplotlib
 torch
 torchvision
+tensorflow
