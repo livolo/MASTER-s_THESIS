@@ -3,6 +3,7 @@ numpy==1.23.5
 pillow
 opencv-python-headless
 matplotlib
-torch
-torchvision
+torch==2.0.1
+torchvision==0.15.2
 tensorflow==2.12.0
+setuptools
