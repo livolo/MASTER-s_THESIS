@@ -1,1 +1,8 @@
-<content_of_requirement.txt>
+streamlit
+numpy
+pillow
+opencv-python-headless
+matplotlib
+torch
+torchvision
+tensorflow
