@@ -6,4 +6,5 @@ matplotlib
 torch==2.0.1
 torchvision==0.15.2
 tensorflow-cpu==2.12.0
-setuptools
+setuptools==65.5.0
+wheel
